@@ -17,6 +17,7 @@ class ConvertTimeCode:
     YT_erid: pd.DataFrame
     YT_without_int: pd.DataFrame
 
+    # BASIC
     def __init__(self):
         self.INPUT_FILE = os.listdir(self.PATH_IN)[0]
         self.FILE = pandas.read_csv(f"{self.PATH_IN}/{self.INPUT_FILE}", encoding='utf-16', header=0, sep=r'\t', engine='python').iloc[:, [0, 2]]
